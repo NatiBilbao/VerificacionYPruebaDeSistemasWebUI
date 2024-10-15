@@ -38,6 +38,7 @@ public class CrearProyectoActualizarTest {
         chrome.findElement(By.id("NewProjNameButton")).click();
         chrome.findElement(By.xpath("//div[@class=\"AddProjectLiDiv\"]")).click();
         Thread.sleep(2000);
+
         Assertions.assertTrue((chrome.findElements(By.xpath("//td[@class='ProjItemContent'][text()='"+project+"']")).size()==1), "ERROR no se pudo crear un proyecto");
 
         //Actualizar Proyecto
@@ -55,10 +56,9 @@ public class CrearProyectoActualizarTest {
         chrome.findElement(By.id("ItemEditTextbox")).clear();
         chrome.findElement(By.id("ItemEditTextbox")).sendKeys(updatedProject);
         chrome.findElement(By.id("ItemEditSubmit")).click();
-
         Thread.sleep(2000);
-        Assertions.assertTrue((chrome.findElements(By.xpath("//td[@class='ProjItemContent'][text()='"+updatedProject+"']")).size()==1), "ERROR no se pudo editar un proyecto");
 
+        Assertions.assertTrue((chrome.findElements(By.xpath("//td[@class='ProjItemContent'][text()='"+updatedProject+"']")).size()==1), "ERROR no se pudo editar un proyecto");
         Thread.sleep(5000);
     }
 
