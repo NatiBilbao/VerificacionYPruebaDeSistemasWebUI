@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class LoginTest {
+public class LoginChromeTest {
     WebDriver chrome;
     @BeforeEach
     public void openBrowser(){
