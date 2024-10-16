@@ -10,7 +10,7 @@ public class FireFox implements IBrowser{
     public WebDriver create() {
         System.setProperty("webdriver.gecko.driver", "src/test/resources/driver/geckodriver.exe");
         WebDriver firefox = new FirefoxDriver();
-        firefox.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        firefox.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         firefox.manage().window().maximize();
         return firefox;
     }

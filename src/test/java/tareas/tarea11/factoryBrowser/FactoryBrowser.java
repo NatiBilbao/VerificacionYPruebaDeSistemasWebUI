@@ -5,9 +5,6 @@ public class FactoryBrowser {
         IBrowser browser;
 
         switch (type.toLowerCase()) {
-            case "chrome":
-                browser = new Chrome();
-                break;
             case "edge":
                 browser = new Edge();
                 break;

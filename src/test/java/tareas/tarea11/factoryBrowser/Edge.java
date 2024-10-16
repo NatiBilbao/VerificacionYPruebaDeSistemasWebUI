@@ -10,7 +10,7 @@ public class Edge implements IBrowser{
     public WebDriver create() {
         System.setProperty("webdriver.edge.driver", "src/test/resources/driver/msedgedriver.exe");
         WebDriver edge = new EdgeDriver();
-        edge.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        edge.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         edge.manage().window().maximize();
         return edge;
     }
